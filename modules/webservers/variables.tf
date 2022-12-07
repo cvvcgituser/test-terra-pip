@@ -30,3 +30,8 @@ variable "webserver2_nametag" {
   description = "select nametag for webserver2  "
   default     = "WEBSERVER2"
 }
+variable "webserver1_sg" {
+
+}
+variable "webserver1_subnet_1"{}
+variable "webserver2_subnet_2"{}
