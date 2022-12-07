@@ -1,7 +1,7 @@
 # Create Web Security Group
 resource "aws_security_group" "web-sg" {
   name        = "${var.web-sg_name}"
-  vpc_id      = aws_vpc.my-vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     description = "HTTP from VPC"
@@ -26,7 +26,7 @@ resource "aws_security_group" "web-sg" {
 # Create Web Server Security Group
 resource "aws_security_group" "webserver-sg" {
   name        = "${var.webserver-sg_name}"
-  vpc_id      = aws_vpc.my-vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     description     = "Allow traffic from web layer"
@@ -51,7 +51,7 @@ resource "aws_security_group" "webserver-sg" {
 # Create Database Security Group
 resource "aws_security_group" "database-sg" {
   name        = "${var.database-sg_name}"
-  vpc_id      = aws_vpc.my-vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     description     = "Allow traffic from application layer"
