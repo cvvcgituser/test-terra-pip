@@ -22,3 +22,4 @@ variable "database-sg_nametag" {
   description = "tagname for database-sg"
   default     = "DATABASE-SG"
 }
+variable "vpc_id" {}
