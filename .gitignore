@@ -1,2 +1,5 @@
 dev/.terraform
 modules/webservers/.terraform
+dev/terraform.tfstate
+dev/terraform.tfstate.backup
+
