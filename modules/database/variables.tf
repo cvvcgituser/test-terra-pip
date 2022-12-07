@@ -1,6 +1,6 @@
-variable "db-instance_name" {
+variable "db_name" {
   description = "database instance name"
-  default     = "RDS-DB"
+  default     = "RDSDB"
 }
 variable "db-instance_username" {
   description = "database instance username"
@@ -8,7 +8,7 @@ variable "db-instance_username" {
 }
 variable "db-instance_password" {
   description = "database instance password"
-  default     = "admin"
+  default     = "Admin1234"
 }
 variable "db-subnet-group_name" {
   description = "database subnet group name"
@@ -18,3 +18,6 @@ variable "db-subnet-group_nametag" {
   description = "database subnet group nametag"
   default     = "My DB subnet group"
 }
+variable "db-subnet-1" {}
+variable "db-subnet-2" {}
+variable "db_sg" {}
