@@ -5,16 +5,16 @@ resource "aws_db_instance" "default" {
   engine_version         = "8.0.28"
   instance_class         = "db.t2.micro"
   multi_az               = true
-  name                   = "${var.db-instance_name}"
-  username               = "${var.db-instance_username}"
-  password               = "${var.db-instance_password}"
+  name                   = var.db_name
+  username               = var.db-instance_username
+  password               = var.db-instance_password
   skip_final_snapshot    = true
-  vpc_security_group_ids = [aws_security_group.database-sg.id]
+  vpc_security_group_ids = [var.db_sg]
 }
 
 resource "aws_db_subnet_group" "default" {
   name       = "${var.db-subnet-group_name}"
-  subnet_ids = [aws_subnet.database-subnet-1.id, aws_subnet.database-subnet-2.id]
+  subnet_ids = [var.db-subnet-1, var.db-subnet-2]
 
   tags = {
     Name = "${var.db-subnet-group_nametag}"
