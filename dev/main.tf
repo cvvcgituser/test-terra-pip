@@ -10,8 +10,6 @@
 # Configure the AWS Provider
 provider "aws" {
   region     = "us-east-1"
-  access_key = "AKIAWSQDCHP4QW2UUGUK"
-  secret_key = "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"
 }
 
 module "networking" {
